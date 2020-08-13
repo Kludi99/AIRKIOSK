@@ -1,0 +1,605 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> AirKiosk</title>
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fc6874d9fd.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="airkiosk.js"></script>
+    
+</head>
+<body>
+    <script>
+        var carousel = new Carousel();
+        carousel.downcarousel();
+    </script>
+    
+    <header>
+        
+        <div class="row justify-content-end" id="settings">
+            
+            <div class="m-1 p-1 pr-2" id="account"><a href="#"><i class="fas fa-user-alt"></i> Moje konto</a></div>
+            <div class="m-1 p-1 pr-4" id="cart"> <a href="#"><i class="fas fa-shopping-cart"></i> 0 PLN</a></div>
+            
+             <div class="dropdown m-1 p-1 pr2">
+          <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            PL
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">ENG</a>
+            <a class="dropdown-item" href="#">GER</a>
+            <a class="dropdown-item" href="#">FR</a>
+          </div>
+        </div>
+            <div class="dropdown m-1 p-1 pr-2 pl-3">
+          <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            PLN
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">GBP</a>
+            <a class="dropdown-item" href="#">EUR</a>
+            <a class="dropdown-item" href="#">USD</a>
+          </div>
+        </div>
+            
+        </div>
+        <div class="row" id="lot">
+            <div class=" col-auto mr-auto"> <img src="img/logo.jpg"  alt="logo"></div>
+            <div class="col-auto" id="reservation"> <div class="row"><div class="col-2"><i class="fas fa-plane"></i></div><div class="col-10"><span class="nr_reserv">Numer Twojej rezerwacji:</span><div class="row"><div class="col-6 number">233AD8</div> <div class="col-6 change"> <a href="#">zmień</a></div></div></div></div>
+    
+            </div>
+        </div>
+        
+        <div class="row"> 
+            <div class="col align-self-start">
+        <nav class="navbar navbar-light navbar-expand-lg ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji"> 
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainmenu">
+                <ul class="navbar-nav mr-5">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"> Dostawa na pokład </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" aria-expanded="false" aria-haspopup="true"> Dostawa na adres </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Usługi </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Aukcje </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Nowości </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Promocje </a>
+                    </li>
+                </ul>
+                
+                </div>
+                <div class="col align-self-end">
+                    <form>
+                 <input type="text" class="form-control" style="font-family: FontAwesome;" placeholder="Szukaj produktu...                 &#xf002" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </form>
+                    
+            </div>
+            
+        </nav>
+                
+  </div>
+                
+       </div>
+        
+    </header>
+    <main>
+        <!-- KARUZELAA -->
+    <div class="container">   
+    <div id="upperCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#upperCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#upperCarousel" data-slide-to="1"></li>
+    <li data-target="#upperCarousel" data-slide-to="2"></li>
+      <li data-target="#upperCarousel" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/aiplane11.jpg" class="d-block w-100" alt="airplane1">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>#AKCJALICYTACJA</h2>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <a href="#">Licytuj bilet ></a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/airplane2.jpg" class="d-block w-100" alt="airplane2">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Second slide label</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/airplane3.jpg" class="d-block w-100" alt="airplane3">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Third slide label</h2>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </div>
+      <div class="carousel-item">
+      <img src="img/airplane4.jpg" class="d-block w-100" alt="airplane3">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Fourth slide label</h2>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev " href="#upperCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next " href="#upperCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> 
+</div>
+        <!-- PRODUKTY-->
+        <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <div class="first-product-grid">
+                    <div class="first-product-image">
+                        <img alt="biżuteria" src="img/bracelet.jpg">
+                    </div>
+                    <div class="first-product-desc">
+                        <h3 class="line">_____BIŻUTERIA_____<br> VISANTI</h3> 
+                        <p>Produkty z oferty SHOP&MORE<br> z dostawą pod wskazany adres na <br>terenie Polski.</p>
+                        <div class="text-center"><button type="button" class="btn btn-outline-primary pl-4 pr-4">Poznaj całą kolekcję></button></div>
+                        
+                    </div>
+                    <div class="more-products">
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+            <div class="product-grid">
+                <a href="#">
+                    <div class="product-image">
+                        <img alt="biżuteria" src="img/ring.jpg">
+                            
+                    </div>
+                    <div class="product-desc">
+                        
+                        <h6>Pierścionek visanti</h6> 
+                        <i class="fas fa-cart-arrow-down"></i>
+                        <p>srebrny z białą perłą słodkowodną ok. 6mm</p>
+                        
+                        
+                    </div>
+                <div class="row ">
+                    <div class="col-6 col-md-12 col-xl-6  product-price">
+                    89,00 PLN
+                    </div>
+                    <div class="col-6 col-md-12 col-xl-6 product-old-price">
+                    129,00 PLN
+                    </div>
+                   
+                </div>
+                 </a>
+            </div>
+            </div>
+            <div class="col-6 col-md-3">
+            <div class="product-grid">
+                <a href="#">
+                    <div class="product-image">
+                        <img alt="biżuteria" src="img/bracelet1.jpg">
+                            
+                    </div>
+                    <div class="product-desc">
+                        
+                        <h6>Bransoleta visanti</h6> 
+                        <i class="fas fa-cart-arrow-down"></i>
+                        <p>perły łososiowe hodowane, słodkowodne 4-5mm, zapięcie srebrne</p>
+                        
+                        
+                    </div>
+                <div class="row ">
+                    <div class="col-6 col-md-12 col-xl-6  product-price">
+                    79,00 PLN
+                    </div>
+                    <div class="col-6 col-md-12 col-xl-6 product-old-price">
+                    83,00 PLN
+                    </div>
+                   
+                </div>
+                 </a>
+            </div>
+            </div>
+            
+            <div class="col-6 col-md-3">
+            <div class="product-grid">
+                <a href="#">
+                    <div class="product-image">
+                        <img alt="biżuteria" src="img/necklace.jpg">
+                            
+                    </div>
+                    <div class="product-desc">
+                        
+                        <h6>Naszyjnik visanti</h6> 
+                        <i class="fas fa-cart-arrow-down"></i>
+                        <p>z perłą shell wielkości 20mm w kolorze białym</p>
+                        
+                        
+                    </div>
+                <div class="row ">
+                    <div class="col-6 col-md-12 col-xl-6  product-price">
+                    149,00 PLN
+                    </div>
+                    <div class="col-6 col-md-12 col-xl-6 product-old-price">
+                    189,00 PLN
+                    </div>
+                   
+                </div>
+                 </a>
+            </div>
+            </div>
+            </div>
+            <!-- REKLAMY -->
+            <div class="row">
+                <div class="col-sm-6 col-12">
+                    
+                <div class="jumbotron">
+                    <a href="#">
+                    <img alt="saving " src="img/saving.jpg">
+                    <div class="row">
+                    <div class="col-8">
+                        <h5>Oszczędzasz do 20%</h5>
+                    </div>
+                    <div class="col-4">
+                        <h6>Wyprzedaż już trwa</h6>
+                        <p>Wszystkie lokalizacje na świecie</p>
+                    </div>
+                    </div>
+                      </a>  
+                </div>
+                    
+                </div>
+                <div class="col-sm-6 col-12">
+                <div class="jumbotron jumbotron-fluid has-bg-img overlay bg-cover">
+                        <h3> luksusowy dojazd</h3>
+                        <h6> Wybierz komfort ponad wszystko. <br> Skorzystaj z usługi a dowieziemy Cię na pokład <br> samolotu limuzyną</h6>
+                    <a href="#">Dowiedz się więcej></a><br><br><br>
+                         </div>
+                    </div>
+                    
+                </div>
+            <!-- AKCESORIA ŁOWICKIE -->
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="product-grid">
+                        
+                        <a href="#">
+                    <div class="product-image2">
+                        <img alt="lowicki zegar" src="img/clock1.jpg">
+                            
+                    </div>
+                    <div class="product-desc2">
+                        
+                        <h6>Budzik łowicki w kolorze białym</h6>
+                        </div>
+                            <div class="product-price2">
+                    59,00 PLN
+                    </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="product-grid">
+                        <a href="#">
+                        <div class="product-image2">
+                        <img alt="lowicki zegar" src="img/magnes1.jpg">
+                        </div>
+                            <div class="product-desc2">
+                                <h6>Magnes łowicki w kolorze białym</h6>
+                            </div>
+                              <div class="product-price2">
+                    6,00 PLN
+                    </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="product-grid">
+                        
+                            <a href="#">
+                            <div class="product-image2">
+                            <img alt="lowicki zegar" src="img/smycz.jpg">
+                            </div>
+                                 <div class="product-desc2">
+                                <h6>Smycz łowicka w kolorze czarnym</h6>
+                            </div>
+                              <div class="product-price2">
+                    10,00 PLN
+                    </div>
+                            </a>
+                        
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="last-product-grid">
+                        <div class="first-product-image">
+                            <img src="img/pattern.jpg">
+                        </div>
+                        <div class="last-product-desc">
+                            <h3 class="line">_____PROUD OF_____<br> POLAND</h3> 
+                        <p>Zobacz jak mozesz poznać Polskę <br>i odkryć jej niezwykłe piękno - poznaj nowoczesne wydanie tradycyjnego<br>polskiego folkloru.
+                            </p>
+                            <div class="text-center"><button type="button" class="btn btn-outline-primary pl-4 pr-4">Poznaj całą kolekcję></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- PASEK INFORMACYJNY -->
+            <div class="row" id="info">
+                <div class="col-3">
+                    <div class="icon">
+                        <i class="fas fa-rocket"></i>
+                        
+                    </div>
+                    <div class="info">
+                        <h6>Dostawa na pokład</h6>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="icon">
+                    <i class="far fa-credit-card"></i>
+                    </div>
+                    <div class="info">
+                        <h6>Płatności miles &more</h6>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="info">
+                        <h6>Płatności online</h6>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="icon">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <div class="info">
+                        <h6>Wysyłka w 24h</h6>
+                    </div>
+                </div>
+            </div>
+            <!--KARUZELA DOLNA -->
+            <div class="row">
+                <div class="col-12 title">
+                    <h4>Nowości w airkiosku</h4>
+                </div>
+            </div>
+        <div class="row lowercarousel">
+        <div class="col-md-12">
+            <div id="carousel_json" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-atrget="#carousel_json" data-slide-to="0" class="active"></li>
+                    <li data-atrget="#carousel_json" data-slide-to="1"></li>
+                    <li data-atrget="#carousel_json" data-slide-to="2"></li>
+                
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-3 product-grid">
+                            <a href="#">
+                            <div class="json_img0 product-image3"></div>
+                            </a>
+                        </div> 
+                        <div class="col-3 product-grid">
+                            <a href="#">
+                           <div class="json_img1 product-image3"></div>
+                            </a>
+                        </div>
+                        <div class="col-3 product-grid">
+                            <a href="#">
+                            <div class="json_img2 product-image3"></div>
+                            </a>
+                        </div>
+                        <div class="col-3 product-grid">
+                            <a href="#">
+                            <div class="json_img3 product-image3"></div>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-3 product-grid">
+                            <a href="#">
+                            <div class="json_img3 product-image3"></div>
+                            </a>
+                        </div> 
+                        <div class="col-3 product-grid">
+                            <a href="#">
+                            <div class="json_img1 product-image3"></div>
+                            </a>
+                        </div>
+                        <div class="col-3 product-grid">
+                            <a href="#">
+                            <div class="json_img2 product-image3"></div>
+                            </a>
+                        </div>
+                        <div class="col-3 product-grid">
+                            <a href="#">
+                            <div class="json_img0 product-image3"></div>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="carousel-item ">
+                    <div class="row">
+                        <div class="col-3 product-grid">
+                            <a href="#">
+                            <div class="json_img2 product-image3"></div>
+                            </a>
+                        </div>
+                        <div class="col-3 product-grid">
+                            <a href="#">
+                            <div class="json_img3 product-image3"></div>
+                            </a>
+                        </div>
+                        <div class="col-3 product-grid">
+                            <a href="#">
+                            <div class="json_img1 product-image3"></div>
+                            </a>
+                        </div>
+                        <div class="col-3 product-grid">
+                            <a href="#">
+                            <div class="json_img0 product-image3"></div>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev " href="#carousel_json" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next " href="#carousel_json" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        </div>
+                    <div class="row">
+                    <div class="col-12">
+                        <div class="text-center"><button type="button" class="btn btn-outline-primary pl-4 pr-4">Więcej nowości></button></div>
+                    </div>
+                    
+                    </div>
+                    <div class="row" id="email">
+                        <img alt="background" src="img/sky3.jpg">
+                        
+                    <div class="col-7">
+                        <div class="row">
+                        <div class="col icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="col  ">
+                            <h3>Zostań łowcą okazji</h3>
+                            <p>Zostaw nam swój e-mail i upoluj specjalne <br>oferty oraz zniżki na trasach LOTu.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <form class="form-inline">
+                    <input class="form-control mr-1" type="search" placeholder="Twój adres email:" aria-label="wyszukaj">
+                    <button class="btn btn-light" type="submit">Dołącz</button>
+                </form>
+                        <label id="first"><input type="checkbox">Zgadzam się na przetwarzanie moich danych przez lot</label>
+                        <label><input type="checkbox">Zgadzam się na przetwarzanie moich danych przez partnerów</label>
+                    </div>
+                    </div>
+            <div class="row" id="last_info">
+            <div class="col-3 ">
+                <h6>Przydatne informacje</h6>
+                <a href="#"><p>Regulamin Sklepu</p></a>
+                <a href="#"><p>Regulamin Aukcji biletów lotniczych</p></a>
+                <a href="#"><p>Regulamin Aukcji Bagażu</p></a>
+                <a href="#"><p>Regulamin Aukcji</p></a>
+            </div>
+            <div class="col-3">
+                <h6>Dla kupującego</h6>
+                <a href="#"><p>Pomoc</p></a>
+                <a href="#"><p>Sposoby dostawy</p></a>
+                <a href="#"><p>Zwroty i gwarancje</p></a>
+                <a href="#"><p>Oferta Miles&More</p></a>
+                <a href="#"><p>Mapa serwisu</p></a>
+            </div>
+            <div class="col-3">
+                <h6>kontakt</h6>
+                <div class="row">
+                <div class="col-2 contacticon">
+                    <i class="fas fa-phone-alt"></i>
+                     
+                </div>
+                <div class="col-10 contacttext">
+                    <p id="phone">Telefon</p>
+                    <p id="phonenumber">01 012-234-34</p>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-2 contacticon">
+                     <i class="far fa-envelope"></i>
+                </div>
+                <div class="col-10 contacttext">
+                    <a href="#"><p id="emailcontact"> Formularz kontaktowy</p></a>
+                </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <h6>Metody płatności</h6>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6  payment">
+                        <img src="img/mastercard.svg">
+                        <img src="img/maestro.png">
+                    </div>
+                    <div class="col-lg-4 col-sm-6  payment">
+                        <img src="img/mastercard.svg">
+                        <img src="img/maestro.png">
+                    </div>
+                    <div class="col-lg-4 col-sm-6 payment">
+                         <img src="img/mastercard.svg">
+                        <img src="img/maestro.png">
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+                
+            </div>
+        
+    </main>
+    <footer>
+        <div class="row">
+            <div class="col-6">
+            <div class="row footernav">
+                <div class="col-3"><a href="#">Strona główna</a></div>
+                <div class="col-3"><a href="#">aukcje</a></div>
+                <div class="col-3"><a href="#">nowości</a></div>
+                <div class="col-3"><a href="#">promocje</a></div>
+            </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                <div class="social-links">
+                    <ul class="social-links">
+                       <li> <p>odwiedź nas na:</p></li>
+      <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+      <li><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
+      <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
+      <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
+      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+    </ul>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </footer>
+  
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
